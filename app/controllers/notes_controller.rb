@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   def index
-    notes = Note.All
+    notes = Note.all
     render json: notes.as_json
   end
 
