@@ -8,4 +8,5 @@
 
 User.create!(name: "mia", email: "mia@test.com", password: "password", password_confirmation: "password")
 
-Note.create!()
+Note.create!(name: "Cleaning", body: "-Mop, -Clean Room, -Laundry, -Sweep", user_id: 1)
+Note.create!(name: "Groceries", body: "-apples, -bread, -mayo, -tomatos", user_id: 1)
