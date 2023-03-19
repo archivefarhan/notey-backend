@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  #Users Route
+  post "/users" => "users#create"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  #Sessions Route
+  post "/sessions" => "sessions#create"
+
+  #Note Routes
+  get "/notes" => "notes#index"
+  get "/notes/:id" => "notes#show"
+  post "/notes" => "notes#create"
+  patch "/notes/:id" => "notes#update"
+  delete "/notes/:id" => "notes#destroy"
 end
