@@ -1,11 +1,11 @@
 class NotesController < ApplicationController
   def index
-    notes = Note.all
+    notes = Note.where(user_id: current_user.id)
     render json: notes.as_json
   end
 
   def create
-    note = Note.create!(name: params[:name], body: params[:body])
+    note = Note.create!(name: params[:name], body: params[:body], user_id: current_user.id)
 
     if note.save
       render json: note.as_json
